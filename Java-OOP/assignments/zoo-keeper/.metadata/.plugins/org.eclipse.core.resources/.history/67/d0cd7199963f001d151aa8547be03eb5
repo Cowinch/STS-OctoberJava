@@ -1,0 +1,21 @@
+package com.cole.ZooKeeper.models;
+
+public class Gorilla extends Mammal {
+
+	public Gorilla(double energyStart) {
+		this.energyLevel=energyStart;
+	}
+
+	public void throwSomething(){
+		this.energyLevel-=5;
+		System.out.println("We thre something! energy decreased by 5");
+	}
+	public void eatBananas(){
+		this.energyLevel+=10;
+		System.out.println("Nom nom, bananas yummy. energy increased by 10");
+	}
+	public void climb(){
+		this.energyLevel-=10;
+		System.out.println("we climbed a tree!");
+	}
+}
