@@ -1,11 +1,10 @@
 package com.cole.ZooKeeper.models;
 
 public class Bat extends Mammal {
-//	protected double energyLevel=300;
+	protected double energyLevel=300;
 
 	//constructor
 	public Bat() {
-		this.energyLevel=300;
 	}
 	
 	
@@ -25,7 +24,6 @@ public class Bat extends Mammal {
 		System.out.println("MUNCH MUNCH! energy increased by 25. remaining energy: " + this.energyLevel);
 	}
 	
-	@Deprecated
 	public void attackTown() {
 		if(energyLevel>=100) {		
 			this.energyLevel-=100;
