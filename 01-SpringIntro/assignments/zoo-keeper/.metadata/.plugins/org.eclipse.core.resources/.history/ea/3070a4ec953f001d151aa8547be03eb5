@@ -1,0 +1,9 @@
+package com.cole.ZooKeeper.models;
+
+public class Gorilla extends Mammal {
+
+	public Gorilla() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

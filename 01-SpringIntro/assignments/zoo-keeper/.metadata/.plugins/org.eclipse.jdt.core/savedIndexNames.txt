@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Owner\Documents\workspace-spring-tool-suite-4-4.16.0.RELEASE\coding-dojo\OctoberJava\Java-OOP\assignments\zoo-keeper\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2748429454.index
+422488386.index

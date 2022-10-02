@@ -1,0 +1,15 @@
+package com.cole.ZooKeeper.models;
+
+public class Mammal {
+	public double energyLevel=100;
+	
+	public double displayEnergy(){
+		return this.energyLevel;
+	}
+	
+	public void throwSomething(String object){
+		this.energyLevel-=5;
+		System.out.println("We threw "+object+"! energy decreased by 5\n remaining energy: "+this.energyLevel);
+	}
+
+}
