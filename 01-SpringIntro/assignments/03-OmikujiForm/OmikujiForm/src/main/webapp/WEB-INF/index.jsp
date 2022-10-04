@@ -18,7 +18,8 @@
 </head>
 <body class="bg-dark">
 	<h1 class="text-center text-light">Send an Omikuji!</h1>
-    	<form action="/show" method="post">
+	<p class="text-center text-light"><c:out value="${error}"/></p>
+    <form action="/process" method="post">
     	<div class="col-2 container p-3 bg-secondary">
             <div class="form-group">
                 <label for="years">Pick any number from 5 to 25</label>
@@ -46,6 +47,6 @@
             </div>
             <button>Submit!</button>
     	</div>
-        </form>
+    </form>
 </body>
 </html>
