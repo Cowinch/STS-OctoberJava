@@ -13,28 +13,15 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body class="bg-secondary">
-	<h1 class="text-center mt-4 text-light">All books</h1>
-	<table class="container col-6 table table-dark table-striped mt-5">
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Title</th>
-			<th>Language</th>
-			<th># Pages</th>
-		</tr>
-	</thead>
-	<tbody>
-		<c:forEach var="book" items="${books}">
-			<tr>
-			<td><c:out value="${book.id }"></c:out></td>
-			<td><a href="book/${book.id}"><c:out value="${book.title }"></c:out></a></td>
-			<td><c:out value="${book.language }"></c:out></td>
-			<td><c:out value="${book.numberOfPages }"></c:out></td>
-			</tr>
-		</c:forEach>
-	</tbody>
-	</table>
-
+	<h1 class="text-center mt-4 text-light">One Book</h1>
+	<div class="container col-4 bg-dark">
+		<h3 class="text-light">Title: <c:out value="${book.title}"/></h3>
+		<p class="text-light">Description: <c:out value="${book.description}"/></p>
+		<p class="text-light">Language: <c:out value="${book.language}"/></p>
+		<p class="text-light">Number of Pages: <c:out value="${book.numberOfPages}"/></p>
+		<p><a href="/">Go Back</a></p>
+	</div>
+	
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
