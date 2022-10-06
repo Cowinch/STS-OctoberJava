@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -22,21 +23,29 @@ public class Expense {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@NotNull
+	
 	@Size(min=2, max=255)
+	@NotNull(message="Expense must not be blank")
 	private String name;
-	@NotNull
+	
 	@Size(min=2, max=255)
+	@NotNull(message="Vendor must not be blank")
 	private String vendor;
-	@Min(1)
+	
+	@Min(value=1)
+	@Max(value=1000000)
+	@NotNull(message="Amount must not be blank")
     private Double amount;
-	@NotNull
+	
+	@NotNull(message="Description must not be blank")
 	@Size(min=2, max=255)
 	private String description;
+	
 	// This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date createdAt;
+    
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date updatedAt;
     

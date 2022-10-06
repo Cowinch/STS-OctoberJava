@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Manage Expenses</title>
+<title>Edit Expenses</title>
 <!-- for Bootstrap CSS -->
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
@@ -15,40 +15,10 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h1 class="container mb-3 text-light">Save Travels</h1>
-	<table class="container table table-dark table-striped mb-5">
-		<thead>
-			<tr>
-				<th>Expense</th>
-				<th>Vendor</th>
-				<th>Amount</th>
-				<th>Options</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="expense" items="${expenses}">
-				<tr>
-					<td><a href="view/<c:out value='${expense.id}'></c:out>"><c:out value="${expense.name}"></c:out></a></td>
-					<td><c:out value="${expense.vendor}"></c:out></td>
-					<td>$<c:out value="${expense.amount}"></c:out></td>
-					<td>
-						<div class=d-flex>
-							<form action="/edit/<c:out value='${expense.id}'></c:out>">
-								<button class="btn btn-warning">Edit</button>
-							</form>
-							<form method="post" action="/delete/<c:out value='${expense.id}'></c:out>">
-								<input type="hidden" name="_method" value="delete">	
-								<input type="submit" value="Delete" class="btn btn-danger">	
-							</form>
-						</div>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<h3 class="container col-3 text-light">Add an expense: </h3>
+	<h1 class="text-center mb-3 text-light">Edit Expenses</h1>
 	<div >
-		<form:form action="/expenses" method="post" modelAttribute="expense">
+		<form:form action="/edit/${expense.id}" method="post" modelAttribute="expense">
+		<input type="hidden" name="_method" value="put">
 		<div class="container col-3 bg-dark p-3">
 			<div class="form-group mb-2 d-flex justify-content-between">
 				<form:label path="name" class="text-light">Expense Name: </form:label>
