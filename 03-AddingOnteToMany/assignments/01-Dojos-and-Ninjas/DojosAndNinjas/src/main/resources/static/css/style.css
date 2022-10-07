@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+body{
+	background-color:#3A3939;
+}
+.box{
+	border-radius:5px;
+	padding:15px 20px;
+}
+
+.underline{
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
