@@ -28,7 +28,7 @@ public class MainController {
 		}
 				
 		// We get the user_id from our session
-		//DOESNT WORK, cannot be typed casted into Long from User
+		//If we get an error, it means we past the whole object. Don't do that, just use .getID()
 		Long userId = (Long) session.getAttribute("user_id");
 		model.addAttribute("user", userServ.findById(userId));
 		return "index.jsp";

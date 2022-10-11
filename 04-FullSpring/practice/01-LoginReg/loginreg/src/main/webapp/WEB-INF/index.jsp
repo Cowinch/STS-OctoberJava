@@ -15,9 +15,9 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h3>Welcome, <c:out value="${user.userName}"></c:out>!</h3>
-	<p>This is your dashboard. Nothing to see here yet.</p>
-	<p><a href="/logout">logout</a></p>
+	<h3 class="text-light">Welcome, <c:out value="${user.userName}"></c:out>!</h3>
+	<p class="text-light">This is your dashboard. Nothing to see here yet.</p>
+	<p><a href="/user/logout">logout</a></p>
 
 
 <!-- For any Bootstrap that uses JS or jQuery-->

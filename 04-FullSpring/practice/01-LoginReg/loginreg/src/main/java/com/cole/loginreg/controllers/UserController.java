@@ -72,7 +72,8 @@ public class UserController {
 			model.addAttribute("newUser",new User());
 			return "loginReg.jsp";
 		}
-		session.setAttribute("user_id", foundUser);
+		//specfically getId, do not pass the whole object into the session!
+		session.setAttribute("user_id", foundUser.getId());
 		return "redirect:/dashboard";
 		
 	}
@@ -83,7 +84,7 @@ public class UserController {
 		// Set user_id to null and redirect to login/register page
 		session.setAttribute("user_id", null);
 	     
-	    return "redirect:/login/register";
+	    return "redirect:/user/login/register";
 	}
 	
 	

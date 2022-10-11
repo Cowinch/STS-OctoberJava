@@ -39,7 +39,7 @@ public class UserService {
 			return null;
 		}
 		if(!BCrypt.checkpw(loginUser.getPassword(), existingUser.getPassword())) {
-		    result.rejectValue("password", "Matches", "Invalid Password!");
+		    result.rejectValue("password", "Matches", "Invalid Password");
 		    return null;
 		}
 		return existingUser;
